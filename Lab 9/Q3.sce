@@ -1,0 +1,20 @@
+clc; clear;
+s = poly(0, 's');
+c = 100 / (s + 30);
+C = syslin('c', c);
+[phm, fm] = p_margin(C)
+disp(sprintf("The gain margin of C(s) is %.8f", g_margin(C)));
+disp(sprintf("The phase margin of C(s) is %.8f at frequenct %.8f Hz", phm, fm));
+scf();
+show_margins(C, 'nyquist');
+T = phm*(%pi/180)/(2*%pi*fm);
+cg = c * (1 - 0.5*s*T + (1/9)*s^2*T**2 - (1/72)*(s*T)^3 + (1/1008)*(s*T)^4 - (1/30240)*(s*T)^5) / (1 + 0.5*s*T + (1/9)*s^2*T**2 + (1/72)*(s*T)^3 + (1/1008)*(s*T)^4 + (1/30240)*(s*T)^5);
+CG = syslin('c', cg);
+scf();
+show_margins(CG, 'nyquist');
+disp(sprintf("The gain margin of C(s)G(s) is %.8f", g_margin(CG)));
+disp(sprintf("The phase margin of C(s)G(s) is %.8f", p_margin(CG)));
+scf();
+bode(C);
+scf();
+bode(CG);
