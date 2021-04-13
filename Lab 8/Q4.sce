@@ -1,0 +1,11 @@
+clc; clear;
+s = poly(0, 's');
+z = 1;
+p1 = 5;
+p2 = 10;
+p3 = 100;
+g = (s + z) / ((s + p1) * (s + p2) * (s + p3));
+G = syslin('c', g);
+scf();
+bode(G);
+title(["Bode plot of", "$\frac{s+1}{(s+5)(s+10)(s+100)}$"], 'fontsize', 3);
