@@ -6,8 +6,8 @@ concepts learnt in the theory course are implemented in these lab assignments to
  the lab course has been conducted in an online fashion, and hence the lab assignments do not involve any controller design aspect for a practical device. There are a total of 10 lab assignments which were 
  to be solved individually. The broad themes of the assignments is provided below.  
  
- ## Lab 1
- It gives an introduction to **Laplace Domain Analysis** and deriving transfer functions of systems using Scilab.  
+## Lab 1
+It gives an introduction to **Laplace Domain Analysis** and deriving transfer functions of systems using Scilab.  
  - [Problem Sheet 1](https://github.com/Ipsit1234/EE-324-Control-Systems-Lab/blob/master/Lab%201/EE324_Problem_Sheet_1.pdf)
  - [Report 1](https://github.com/Ipsit1234/EE-324-Control-Systems-Lab/blob/master/Lab%201/EE324_Problem_Sheet_1_report.pdf)  
  
